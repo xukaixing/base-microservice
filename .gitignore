@@ -78,3 +78,6 @@ selenium-debug.log
 package.json.rej
 package-lock.json
 yarn.lock
+
+# Log
+logs/
