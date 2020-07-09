@@ -1,0 +1,16 @@
+#接入eureka注册管理中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    #默认情况下，Eureka 使用 hostname 进行服务注册，以及服务信息的显示
+    #使用客户端的ip地址注册
+    prefer-ip-address: true
+server:
+  port: 8763
+spring:
+  application:
+    # 由于服务之间是根据此名称进行相互调用，所以此时表示 8763,8762对外提供一个服务
+    # 服务名为eureka-client=====>等同于一个小的集群
+    name: eureka-client

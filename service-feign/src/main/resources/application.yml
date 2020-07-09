@@ -1,0 +1,15 @@
+#接入eureka注册管理中心
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    #默认情况下，Eureka 使用 hostname 进行服务注册，以及服务信息的显示
+    #使用客户端的ip地址注册
+    prefer-ip-address: true
+server:
+  port: 8765
+spring:
+  application:
+    name: service-feign
+
